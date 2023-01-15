@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 const Dashboard = () => {
@@ -23,6 +24,7 @@ const Dashboard = () => {
         <p>Total likes count: {dashData.likes}</p>
         <p>Total followers: {dashData.followers}</p>
         <p>Total following: {dashData.following}</p>
+        <Link className='underline hover:text-red-500' href='/dashboard/swr'>View by SWR</Link>
         </>
     }
     return (
