@@ -1,6 +1,6 @@
-import User from '@/components/user';
+
 import Link from 'next/link';
-import React, { user } from 'react';
+import React from 'react';
 
 const Home = ({ users }) => {
     return (
@@ -9,20 +9,11 @@ const Home = ({ users }) => {
                 <Link className='px-2 underline text-xl' href='/about'>About</Link>
                 <Link className='px-2 underline text-xl' href='/blogs'>Blogs</Link>
                 <Link className='px-2 underline text-xl' href='/products'>Products</Link>
+                <Link className='px-2 underline text-xl' href='/posts'>Posts</Link>
+                <Link className='px-2 underline text-xl' href='/news'>News</Link>
+                <Link className='px-2 underline text-xl' href='/dashboard'>Dashboard</Link>
             </div>
             <h1 className=''>This is home</h1>
-            <div className=''>
-                <h2>Getting user data</h2>
-                <div className='grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-10'>
-                    {
-                        users.map((user) =>
-                            <>
-                                <User user={user} />
-                            </>
-                        )
-                    }
-                </div>
-            </div>
         </div>
     );
 };
